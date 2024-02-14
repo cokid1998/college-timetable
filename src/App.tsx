@@ -1,27 +1,11 @@
 import Calendar from "@toast-ui/react-calendar";
 import "@toast-ui/calendar/dist/toastui-calendar.min.css";
-
-const initialEvents = [
-  {
-    id: "1",
-    calendarId: "cal1",
-    title: "Lunch",
-    category: "time",
-    body: "TOAST UI Calendar",
-    start: "2024-02-14T10:00:00",
-    end: "2024-02-14T12:30:00",
-    backgroundColor: "#03bd9e",
-    location: "Meeting Room A",
-    customStyle: {
-      borderLeft: "0px solid transparent",
-    },
-    raw: "asdf",
-  },
-];
+import { createEventHTML } from "./util";
+import { SUBJECT_INFO } from "./data/subjectInfo";
 
 const calendarOptions = {
   isReadOnly: true,
-  events: initialEvents,
+  events: SUBJECT_INFO,
   week: {
     startDayOfWeek: 1,
     dayNames: ["일", "월", "화", "수", "목", "금", "토"],
@@ -33,10 +17,18 @@ const calendarOptions = {
   },
 };
 
+const template = {
+  time(event = SUBJECT_INFO[0]) {
+    const { title, location, start } = event;
+    return createEventHTML(title, location, start);
+  },
+};
+
 function App() {
   return (
     <div>
       <Calendar
+        template={template}
         {...calendarOptions}
         height="100svh"
         theme={{
