@@ -12,14 +12,10 @@ const initialEvents = [
     end: "2024-02-14T12:30:00",
     backgroundColor: "#03bd9e",
     location: "Meeting Room A",
-  },
-  {
-    id: "2",
-    calendarId: "cal1",
-    title: "Coffee Break",
-    category: "time",
-    start: "2022-06-28T15:00:00",
-    end: "2022-06-28T15:30:00",
+    customStyle: {
+      borderLeft: "0px solid transparent",
+    },
+    raw: "asdf",
   },
 ];
 

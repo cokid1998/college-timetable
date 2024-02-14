@@ -2,22 +2,10 @@ body {
   margin: 0;
 }
 
-.tui-full-calendar-month-weekday-grid {
-  margin-left: 0;
-}
-
-.tui-full-calendar-weekday-schedule {
-  margin-left: 0;
-}
-
-.tui-full-calendar-month-divider {
-  margin-left: 0;
-}
-
-.toastui-calendar-event-time {
-  margin-left: 0;
-}
-
 .toastui-calendar-events {
   margin-right: 0 !important;
+}
+
+.toastui-calendar-timegrid {
+  height: 100lvh;
 }
