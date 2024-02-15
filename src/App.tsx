@@ -2,6 +2,7 @@ import Calendar from "@toast-ui/react-calendar";
 import "@toast-ui/calendar/dist/toastui-calendar.min.css";
 import { createEventHTML } from "./util";
 import { SUBJECT_INFO } from "./data/subjectInfo";
+import Layout from "./layout";
 
 const calendarOptions = {
   isReadOnly: true,
@@ -10,7 +11,7 @@ const calendarOptions = {
     startDayOfWeek: 1,
     dayNames: ["일", "월", "화", "수", "목", "금", "토"],
     workweek: true,
-    hourStart: 9,
+    hourStart: 8,
     hourEnd: 20,
     taskView: false,
     eventView: ["time"],
@@ -26,7 +27,7 @@ const template = {
 
 function App() {
   return (
-    <div>
+    <Layout>
       <Calendar
         template={template}
         {...calendarOptions}
@@ -52,7 +53,7 @@ function App() {
           },
         }}
       />
-    </div>
+    </Layout>
   );
 }
 

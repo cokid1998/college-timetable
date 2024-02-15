@@ -1,0 +1,41 @@
+import "./NextClassTimer.style.css";
+import { SUBJECT_INFO } from "../data/subjectInfo";
+
+const NextClassTimer = () => {
+  const curDay = new Date().getDate();
+  const curHour = new Date().getHours();
+  const curMinutes = new Date().getMinutes();
+
+  const curSubject = SUBJECT_INFO.filter((item) => {
+    const subjectDay = Number(item.start.slice(8, 10));
+    const subjectStartHour = Number(item.start.slice(11, 13));
+
+    console.log(curHour < subjectStartHour);
+    if (curDay === subjectDay && curHour < subjectStartHour) {
+      return true;
+    } else false;
+  });
+
+  const nearNextClass = curSubject[0];
+  const countNextClass = Number(nearNextClass?.start.slice(11, 13)) - curHour;
+
+  return (
+    <div className="nextClassTimer-container">
+      {!curSubject.length ? (
+        "오늘 수업은 다 들었다 들어가서 쉬도록"
+      ) : (
+        <div>
+          {nearNextClass.title} 들을 때 까지{" "}
+          <span style={{ color: "#ff000c" }}>
+            {countNextClass}시간 {curMinutes}분
+          </span>{" "}
+          남았다.
+          <br />
+          <span style={{ color: "#006cb7" }}>({nearNextClass.location})</span>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default NextClassTimer;
