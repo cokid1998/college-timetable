@@ -34,7 +34,6 @@ function App() {
         height="100svh"
         theme={{
           week: {
-            dayGrid: {},
             dayGridLeft: {
               width: "45px",
             },

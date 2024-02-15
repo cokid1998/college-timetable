@@ -152,7 +152,7 @@ const WEDNESDAY_SUBJECT = [
     "15:00",
     3,
     subjectColor.점심시간,
-    "뭐하긴 뭐해 공부해야지😤"
+    "뭐하긴 뭐해 공부해야지 📚︎✍️"
   ),
   new TimeTableEvent(
     "데이터구조",
