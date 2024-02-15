@@ -25,7 +25,7 @@ const NextClassTimer = () => {
       ) : (
         <div>
           {nearNextClass.title} 들을 때 까지{" "}
-          <span style={{ color: "#fffc00" }}>
+          <span style={{ color: "#fffc00", fontWeight: "bold" }}>
             {countNextClass}시간 {curMinutes}분
           </span>{" "}
           남았다.
