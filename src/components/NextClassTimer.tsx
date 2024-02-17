@@ -2,6 +2,8 @@ import "./NextClassTimer.style.css";
 import { SUBJECT_INFO } from "../data/subjectInfo";
 
 const NextClassTimer = () => {
+  const isWeekend =
+    new Date().getDay() === 0 || new Date().getDay() === 6 ? true : false;
   const curDay = new Date().getDate();
   const curHour = new Date().getHours();
   const curMinutes = new Date().getMinutes();
@@ -20,8 +22,10 @@ const NextClassTimer = () => {
 
   return (
     <div className="nextClassTimer-container">
-      {!curSubject.length ? (
-        "오늘 수업은 다 들었다 들어가서 쉬도록"
+      {isWeekend ? (
+        "주말이니 좀 쉬도록 🛌"
+      ) : !curSubject.length ? (
+        "오늘 수업은 다 들었다. 복습하도록 ✍️"
       ) : (
         <div>
           {nearNextClass.title} 들을 때 까지{" "}
