@@ -8,7 +8,6 @@ const calendarOptions = {
   isReadOnly: true,
   events: SUBJECT_INFO,
   week: {
-    startDayOfWeek: 1,
     dayNames: ["일", "월", "화", "수", "목", "금", "토"],
     workweek: true,
     hourStart: 8,
