@@ -205,14 +205,6 @@ const THURSDAY_SUBJECT = [
     subjectColor.객체지향프로그래밍,
     "프로그래밍실습실 10225"
   ),
-  new TimeTableEvent(
-    "객체지향프로그래밍",
-    "20:00",
-    "22:00",
-    4,
-    subjectColor.객체지향프로그래밍,
-    "프로그래밍실습실 10225"
-  ),
 ];
 
 const FRIDAY_SUBJECT = [
