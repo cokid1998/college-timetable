@@ -10,7 +10,6 @@ const subjectColor = {
 class TimeTableEvent {
   private static idCounter: number = 1;
   private static currentWeekDay = new Date().getDay();
-  private static currentDate = new Date().toISOString().slice(0, 10);
 
   id: string;
   calendarId: string;
@@ -68,13 +67,9 @@ class TimeTableEvent {
     currentWeekDay: number,
     subjectWeekDay: number
   ) => {
-    const curDay = TimeTableEvent.currentDate.slice(8);
-
-    if (currentWeekDay === subjectWeekDay) {
-      return new Date().toISOString().slice(0, 11);
-    }
+    const curDay = new Date().getDate();
     const curWeekdayBetweenSubjectWeekday = currentWeekDay - subjectWeekDay;
-    const subjectDay = Number(curDay) - curWeekdayBetweenSubjectWeekday;
+    const subjectDay = Math.abs(curDay - curWeekdayBetweenSubjectWeekday);
     const subjectDate = `2024-${TimeTableEvent.getMonth()}-${subjectDay}T`;
     return subjectDate;
   };
