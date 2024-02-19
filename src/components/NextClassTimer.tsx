@@ -6,7 +6,6 @@ const NextClassTimer = () => {
     new Date().getDay() === 0 || new Date().getDay() === 6 ? true : false;
   const curDay = new Date().getDate();
   const curHour = new Date().getHours();
-  const curMinutes = new Date().getMinutes();
 
   const curSubject = SUBJECT_INFO.filter((item) => {
     const subjectDay = Number(item.start.slice(8, 10));
@@ -18,7 +17,13 @@ const NextClassTimer = () => {
   });
 
   const nearNextClass = curSubject[0];
-  const countNextClass = Number(nearNextClass?.start.slice(11, 13)) - curHour;
+  const currentDate = new Date();
+  const targetDate = new Date(nearNextClass.start);
+  const timeDifference = targetDate.getTime() - currentDate.getTime();
+  const remainingHours = Math.floor(timeDifference / (1000 * 60 * 60));
+  const remainingMinutes = Math.floor(
+    (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+  );
 
   return (
     <div className="nextClassTimer-container">
@@ -30,7 +35,7 @@ const NextClassTimer = () => {
         <div>
           {nearNextClass.title} 들을 때 까지{" "}
           <span style={{ color: "#fffc00", fontWeight: "bold" }}>
-            {countNextClass}시간 {curMinutes}분
+            {remainingHours}시간 {remainingMinutes}분
           </span>{" "}
           남았다.
           <br />
