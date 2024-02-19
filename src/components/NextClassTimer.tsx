@@ -35,7 +35,7 @@ const NextClassTimer = () => {
         <div>
           {nearNextClass.title} 들을 때 까지{" "}
           <span style={{ color: "#fffc00", fontWeight: "bold" }}>
-            {remainingHours}시간 {remainingMinutes}분
+            {remainingHours ? remainingHours + "시간" : ""} {remainingMinutes}분
           </span>{" "}
           남았다.
           <br />
