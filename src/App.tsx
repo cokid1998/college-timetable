@@ -24,32 +24,34 @@ const template = {
   },
 };
 
+const theme = {
+  week: {
+    dayGridLeft: {
+      width: "45px",
+    },
+    timeGridLeft: {
+      width: "40px",
+    },
+    timeGridHalfHourLine: {
+      borderBottom: "1px dotted #e5e5e5",
+    },
+    nowIndicatorLabel: {
+      color: "#515DE6",
+    },
+    nowIndicatorBullet: {
+      backgroundColor: "#515ce6",
+    },
+  },
+};
+
 function App() {
   return (
     <Layout>
       <Calendar
-        template={template}
-        {...calendarOptions}
         height="100svh"
-        theme={{
-          week: {
-            dayGridLeft: {
-              width: "45px",
-            },
-            timeGridLeft: {
-              width: "40px",
-            },
-            timeGridHalfHourLine: {
-              borderBottom: "1px dotted #e5e5e5",
-            },
-            nowIndicatorLabel: {
-              color: "#515DE6",
-            },
-            nowIndicatorBullet: {
-              backgroundColor: "#515ce6",
-            },
-          },
-        }}
+        template={template}
+        theme={theme}
+        {...calendarOptions}
       />
     </Layout>
   );
