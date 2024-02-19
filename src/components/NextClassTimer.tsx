@@ -40,7 +40,11 @@ const NextClassTimer = () => {
           남았다.
           <br />
           <div
-            style={{ color: "#0046a5", marginTop: "10px", fontWeight: "bold" }}
+            style={{
+              color: nearNextClass.backgroundColor,
+              marginTop: "10px",
+              fontWeight: "bold",
+            }}
           >
             ({nearNextClass.location})
           </div>
