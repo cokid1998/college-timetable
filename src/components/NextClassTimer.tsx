@@ -16,7 +16,7 @@ const NextClassTimer = () => {
     } else false;
   });
 
-  const nearNextClass = curSubject[0];
+  const nearNextClass = curSubject[0] ?? "";
   const currentDate = new Date();
   const targetDate = new Date(nearNextClass.start);
   const timeDifference = targetDate.getTime() - currentDate.getTime();
