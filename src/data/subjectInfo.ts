@@ -1,9 +1,9 @@
 const subjectColor = {
   경데처: "#7BA5E9",
-  데이터구조: "#ff968a",
-  서버웹프로그래밍: "#fcaa68",
-  컴퓨터네트워크: "#C16FCB",
-  객체지향프로그래밍: "#FFDB58",
+  핀테크프로그래밍: "#C16FCB",
+  기초프로그래밍: "#03bd9e",
+  객체지향프로그래밍: "#fcaa68",
+  인강: "#FFDB58",
   점심시간: "#3EE87F",
 };
 
@@ -88,47 +88,31 @@ const MONDAY_SUBJECT = [
     "경상5425"
   ),
   new TimeTableEvent(
-    "점심시간",
-    "12:00",
-    "13:00",
-    1,
-    subjectColor.점심시간,
-    "밥먹자!999🐓"
-  ),
-  new TimeTableEvent(
-    "데이터구조",
-    "13:00",
+    "핀테크프로그래밍",
     "14:00",
+    "16:00",
     1,
-    subjectColor.데이터구조,
-    "IT 2104-2"
+    subjectColor.핀테크프로그래밍,
+    "경상 5419"
   ),
 ];
 
 const TUESDAY_SUBJECT = [
   new TimeTableEvent(
-    "서버웹프로그래밍",
-    "09:00",
-    "11:00",
-    2,
-    subjectColor.서버웹프로그래밍,
-    "데이터베이스프로그래밍실습실 7225"
-  ),
-  new TimeTableEvent(
     "기초프로그래밍",
     "11:00",
     "13:00",
     2,
-    "#03bd9e",
+    subjectColor.기초프로그래밍,
     "데이터베이스프로그래밍실습실 7225"
   ),
   new TimeTableEvent(
-    "컴퓨터네트워크",
+    "객체지향프로그래밍",
     "13:00",
     "15:00",
     2,
-    subjectColor.컴퓨터네트워크,
-    "IT 2105-1"
+    subjectColor.객체지향프로그래밍,
+    "임베디드시스템및소프트웨어실습실 ????"
   ),
 ];
 
@@ -141,75 +125,52 @@ const WEDNESDAY_SUBJECT = [
     subjectColor.경데처,
     "경상5425"
   ),
+
   new TimeTableEvent(
-    "나 이시간에 뭐하냐....",
-    "12:00",
+    "핀테크프로그래밍",
     "15:00",
+    "16:00",
     3,
-    subjectColor.점심시간,
-    "뭐하긴 뭐해 공부해야지 📚︎✍️"
-  ),
-  new TimeTableEvent(
-    "데이터구조",
-    "15:00",
-    "17:00",
-    3,
-    subjectColor.데이터구조,
-    "IT 2104-2"
+    subjectColor.핀테크프로그래밍,
+    "경상 5419"
   ),
 ];
 
 const THURSDAY_SUBJECT = [
   new TimeTableEvent(
-    "서버웹프로그래밍",
-    "09:00",
-    "11:00",
-    4,
-    subjectColor.서버웹프로그래밍,
-    "데이터베이스프로그래밍실습실 7225"
-  ),
-  new TimeTableEvent(
-    "점심시간",
-    "11:00",
+    "객체지향프로그래밍",
+    "10:00",
     "12:00",
     4,
-    subjectColor.점심시간,
-    "밥먹자!999🐓"
+    subjectColor.객체지향프로그래밍,
+    "임베디드시스템및소프트웨어실습실 ????"
   ),
   new TimeTableEvent(
     "기초프로그래밍",
     "12:00",
     "14:00",
     4,
-    "#03bd9e",
+    subjectColor.기초프로그래밍,
     "데이터베이스프로그래밍실습실 7225"
-  ),
-  new TimeTableEvent(
-    "컴퓨터네트워크",
-    "15:00",
-    "16:00",
-    4,
-    subjectColor.컴퓨터네트워크,
-    "IT 2105-1"
-  ),
-  new TimeTableEvent(
-    "객체지향프로그래밍",
-    "16:00",
-    "18:00",
-    4,
-    subjectColor.객체지향프로그래밍,
-    "프로그래밍실습실 10225"
   ),
 ];
 
 const FRIDAY_SUBJECT = [
   new TimeTableEvent(
-    "객체지향프로그래밍",
-    "16:00",
-    "18:00",
+    "사건으로보는옛이야기",
+    "09:00",
+    "11:00",
     5,
-    subjectColor.객체지향프로그래밍,
-    "프로그래밍실습실 10225"
+    subjectColor.인강,
+    "사이버캠퍼스"
+  ),
+  new TimeTableEvent(
+    "톡!톡!디자인씽킹과창업",
+    "11:00",
+    "13:00",
+    5,
+    subjectColor.인강,
+    "사이버캠퍼스"
   ),
 ];
 
