@@ -9,7 +9,6 @@ const subjectColor = {
 
 class TimeTableEvent {
   private static idCounter: number = 1;
-  private static currentWeekDay = new Date().getDay();
 
   id: string;
   calendarId: string;
@@ -34,14 +33,8 @@ class TimeTableEvent {
     this.id = TimeTableEvent.getNextId();
     this.calendarId = `cal${TimeTableEvent.getNextId()}`;
     this.title = title;
-    this.start = `${TimeTableEvent.syncSubjectDate(
-      TimeTableEvent.currentWeekDay,
-      subjectWeekday
-    )}${start}`;
-    this.end = `${TimeTableEvent.syncSubjectDate(
-      TimeTableEvent.currentWeekDay,
-      subjectWeekday
-    )}${end}`;
+    this.start = `${TimeTableEvent.syncSubjectDate(subjectWeekday)}${start}`;
+    this.end = `${TimeTableEvent.syncSubjectDate(subjectWeekday)}${end}`;
     this.subjectWeekday = subjectWeekday;
     this.backgroundColor = backgroundColor;
     this.location = location;
@@ -56,22 +49,26 @@ class TimeTableEvent {
     return nextId;
   }
 
-  private static getMonth() {
+  private static syncSubjectDate = (subjectWeekday: number) => {
+    const year = new Date().getFullYear();
     const month = new Date().getMonth() + 1;
-    const formattedMonth = month < 10 ? "0" + month : "" + month;
+    const day = new Date().getDate();
+    const weekDay = new Date().getDay();
 
-    return formattedMonth;
-  }
+    if (day > 6) {
+      const beforeMonthDay = new Date(year, month - 1, 0).getDate();
+      const beforeDay = beforeMonthDay - (4 - subjectWeekday); // 4의 의미가 뭘까?? 요일은 5개인데...
 
-  private static syncSubjectDate = (
-    currentWeekDay: number,
-    subjectWeekDay: number
-  ) => {
-    const curDay = new Date().getDate();
-    const curWeekdayBetweenSubjectWeekday = currentWeekDay - subjectWeekDay;
-    const subjectDay = Math.abs(curDay - curWeekdayBetweenSubjectWeekday);
-    const subjectDate = `2024-${TimeTableEvent.getMonth()}-${subjectDay}T`;
-    return subjectDate;
+      return `${year}-0${month - 1}-${beforeDay}T`;
+    } else {
+      const formatMonth = month < 10 ? `0${month}` : month;
+      const subjectDay =
+        day - (weekDay - subjectWeekday) < 10
+          ? `0${day - (weekDay - subjectWeekday)}`
+          : day - (weekDay - subjectWeekday);
+
+      return `${year}-${formatMonth}-${subjectDay}T`;
+    }
   };
 }
 
