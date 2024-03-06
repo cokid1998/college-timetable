@@ -56,7 +56,7 @@ class TimeTableEvent {
     const day = new Date().getDate();
     const weekDay = new Date().getDay();
 
-    if (day > 6) {
+    if (day < 6) {
       const beforeMonthDay = new Date(year, month - 1, 0).getDate();
       const beforeDay = beforeMonthDay - (4 - subjectWeekday); // 4의 의미가 뭘까?? 요일은 5개인데...
 
