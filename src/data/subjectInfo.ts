@@ -3,7 +3,7 @@ const subjectColor = {
   컴퓨터네트워크: "#C16FCB",
   기초프로그래밍: "#03bd9e",
   객체지향프로그래밍: "#fcaa68",
-  인강: "#FFDB58",
+  데이터구조: "#FFDB58",
   점심시간: "#3EE87F",
   산업체특강1: "#F7578C",
 };
@@ -86,6 +86,14 @@ const MONDAY_SUBJECT = [
     "경상5425"
   ),
   new TimeTableEvent(
+    "데이터구조",
+    "13:00",
+    "14:00",
+    1,
+    subjectColor.데이터구조,
+    "IT 2225"
+  ),
+  new TimeTableEvent(
     "컴퓨터네트워크",
     "15:00",
     "16:00",
@@ -121,6 +129,14 @@ const WEDNESDAY_SUBJECT = [
     "12:00",
     3,
     subjectColor.경데처,
+    "경상5425"
+  ),
+  new TimeTableEvent(
+    "데이터구조",
+    "15:00",
+    "17:00",
+    3,
+    subjectColor.데이터구조,
     "경상5425"
   ),
 ];
@@ -162,19 +178,11 @@ const FRIDAY_SUBJECT = [
     "IT 3108"
   ),
   new TimeTableEvent(
-    "문화콘텐츠와 스토리텔링",
-    "17:00",
-    "18:00",
-    5,
-    subjectColor.인강,
-    "사이버캠퍼스"
-  ),
-  new TimeTableEvent(
     "톡!톡!디자인씽킹과창업",
     "18:00",
     "19:00",
     5,
-    subjectColor.인강,
+    subjectColor.데이터구조,
     "사이버캠퍼스"
   ),
 ];
