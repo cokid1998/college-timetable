@@ -91,7 +91,7 @@ const MONDAY_SUBJECT = [
     "14:00",
     1,
     subjectColor.데이터구조,
-    "IT 2225"
+    "IT 2104"
   ),
   new TimeTableEvent(
     "컴퓨터네트워크",
@@ -137,7 +137,7 @@ const WEDNESDAY_SUBJECT = [
     "17:00",
     3,
     subjectColor.데이터구조,
-    "경상5425"
+    "IT 2104"
   ),
 ];
 
