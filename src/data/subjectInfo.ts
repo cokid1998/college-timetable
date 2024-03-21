@@ -162,20 +162,20 @@ const THURSDAY_SUBJECT = [
 
 const FRIDAY_SUBJECT = [
   new TimeTableEvent(
-    "컴퓨터네트워크",
-    "14:00",
-    "16:00",
-    5,
-    subjectColor.컴퓨터네트워크,
-    "IT 2225"
-  ),
-  new TimeTableEvent(
     "산업체특강1",
     "11:00",
     "12:00",
     5,
     subjectColor.산업체특강1,
     "IT 3108"
+  ),
+  new TimeTableEvent(
+    "컴퓨터네트워크",
+    "14:00",
+    "16:00",
+    5,
+    subjectColor.컴퓨터네트워크,
+    "IT 2225"
   ),
   new TimeTableEvent(
     "톡!톡!디자인씽킹과창업",
