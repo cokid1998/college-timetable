@@ -1,11 +1,12 @@
 const subjectColor = {
-  경데처: "#7BA5E9",
-  컴퓨터네트워크: "#C16FCB",
-  기초프로그래밍: "#03bd9e",
-  객체지향프로그래밍: "#fcaa68",
-  데이터구조: "#FFDB58",
-  점심시간: "#3EE87F",
-  산업체특강1: "#F7578C",
+  운영체제: "#7BA5E9",
+  생산: "#C16FCB",
+  자바: "#03bd9e",
+  소프트웨어: "#FFDB58",
+  심화프로그래밍: "#3EE87F",
+  경영영어: "#F7578C",
+  알고리즘: "#fcaa68",
+  데이터베이스: "#fcaa68",
 };
 
 class TimeTableEvent {
@@ -78,114 +79,123 @@ class TimeTableEvent {
 
 const MONDAY_SUBJECT = [
   new TimeTableEvent(
-    "경데처",
-    "10:00",
+    "운영체제",
     "12:00",
-    1,
-    subjectColor.경데처,
-    "경상5425"
-  ),
-  new TimeTableEvent(
-    "데이터구조",
-    "13:00",
     "14:00",
     1,
-    subjectColor.데이터구조,
-    "IT 2104"
-  ),
-  new TimeTableEvent(
-    "컴퓨터네트워크",
-    "15:00",
-    "16:00",
-    1,
-    subjectColor.컴퓨터네트워크,
-    "IT 2225"
+    subjectColor.운영체제,
+    "IT 3228"
   ),
 ];
 
 const TUESDAY_SUBJECT = [
+  // new TimeTableEvent(
+  //   "생산",
+  //   "10:00",
+  //   "12:00",
+  //   2,
+  //   subjectColor.생산,
+  //   "데이터베이스프로그래밍실습실 7225"
+  // ),
   new TimeTableEvent(
-    "기초프로그래밍",
-    "11:00",
-    "13:00",
-    2,
-    subjectColor.기초프로그래밍,
-    "데이터베이스프로그래밍실습실 7225"
-  ),
-  new TimeTableEvent(
-    "객체지향프로그래밍",
+    "자바",
     "13:00",
     "15:00",
     2,
-    subjectColor.객체지향프로그래밍,
+    subjectColor.자바,
     "임베디드시스템및소프트웨어실습실 7210"
+  ),
+  new TimeTableEvent(
+    "알고리즘",
+    "15:00",
+    "16:30",
+    2,
+    subjectColor.알고리즘,
+    "IT홀 3108"
   ),
 ];
 
 const WEDNESDAY_SUBJECT = [
   new TimeTableEvent(
-    "경데처",
+    "운영체제",
+    "10:00",
     "11:00",
-    "12:00",
     3,
-    subjectColor.경데처,
-    "경상5425"
+    subjectColor.운영체제,
+    "IT 3228"
   ),
+  // new TimeTableEvent(
+  //   "소프트웨어",
+  //   "11:00",
+  //   "12:00",
+  //   3,
+  //   subjectColor.소프트웨어,
+  //   "IT 2104"
+  // ),
   new TimeTableEvent(
-    "데이터구조",
-    "15:00",
-    "17:00",
+    "심화프로그래밍",
+    "14:00",
+    "16:00",
     3,
-    subjectColor.데이터구조,
-    "IT 2104"
+    subjectColor.심화프로그래밍,
+    "멀티미디어실습실 (10221)"
   ),
 ];
 
 const THURSDAY_SUBJECT = [
+  // new TimeTableEvent(
+  //   "생산",
+  //   "10:00",
+  //   "11:00",
+  //   4,
+  //   subjectColor.생산,
+  //   "임베디드시스템및소프트웨어실습실 7210"
+  // ),
   new TimeTableEvent(
-    "객체지향프로그래밍",
-    "10:00",
-    "12:00",
+    "자바",
+    "13:00",
+    "15:00",
     4,
-    subjectColor.객체지향프로그래밍,
-    "임베디드시스템및소프트웨어실습실 7210"
+    subjectColor.자바,
+    "데이터베이스프로그래밍실습실 7210"
   ),
   new TimeTableEvent(
-    "기초프로그래밍",
-    "12:00",
-    "14:00",
+    "알고리즘",
+    "16:00",
+    "17:30",
     4,
-    subjectColor.기초프로그래밍,
-    "데이터베이스프로그래밍실습실 7225"
+    subjectColor.알고리즘,
+    "IT홀 3108"
   ),
 ];
 
 const FRIDAY_SUBJECT = [
+  // new TimeTableEvent(
+  //   "경영영어",
+  //   "10:00",
+  //   "12:00",
+  //   5,
+  //   subjectColor.경영영어,
+  //   "IT 3108"
+  // ),
+  // new TimeTableEvent(
+  //   "소프트웨어",
+  //   "13:00",
+  //   "15:00",
+  //   5,
+  //   subjectColor.소프트웨어,
+  //   "IT 2225"
+  // ),
   new TimeTableEvent(
-    "산업체특강1",
-    "11:00",
-    "12:00",
-    5,
-    subjectColor.산업체특강1,
-    "IT 3108"
-  ),
-  new TimeTableEvent(
-    "컴퓨터네트워크",
-    "14:00",
+    "심프",
+    "15:00",
     "16:00",
     5,
-    subjectColor.컴퓨터네트워크,
-    "IT 2225"
-  ),
-  new TimeTableEvent(
-    "톡!톡!디자인씽킹과창업",
-    "18:00",
-    "19:00",
-    5,
-    subjectColor.데이터구조,
-    "사이버캠퍼스"
+    subjectColor.심화프로그래밍,
+    "멀티미디어실습실 10221"
   ),
 ];
+
 
 export const SUBJECT_INFO = [
   ...MONDAY_SUBJECT,
