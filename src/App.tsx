@@ -10,7 +10,7 @@ const calendarOptions = {
   week: {
     dayNames: ["일", "월", "화", "수", "목", "금", "토"],
     workweek: true,
-    hourStart: 8,
+    hourStart: 9,
     hourEnd: 20,
     taskView: false,
     eventView: ["time"],
