@@ -56,20 +56,13 @@ class TimeTableEvent {
     const day = new Date().getDate();
     const weekDay = new Date().getDay();
 
-    if (day < 6) {
-      const beforeMonthDay = new Date(year, month - 1, 0).getDate();
-      const beforeDay = beforeMonthDay - (4 - subjectWeekday); // 4의 의미가 뭘까?? 요일은 5개인데...
+    const formatMonth = month < 10 ? `0${month}` : month;
+    const subjectDay =
+      day - (weekDay - subjectWeekday) < 10
+        ? `0${day - (weekDay - subjectWeekday)}`
+        : day - (weekDay - subjectWeekday);
 
-      return `${year}-0${month - 1}-${beforeDay}T`;
-    } else {
-      const formatMonth = month < 10 ? `0${month}` : month;
-      const subjectDay =
-        day - (weekDay - subjectWeekday) < 10
-          ? `0${day - (weekDay - subjectWeekday)}`
-          : day - (weekDay - subjectWeekday);
-
-      return `${year}-${formatMonth}-${subjectDay}T`;
-    }
+    return `${year}-${formatMonth}-${subjectDay}T`;
   };
 }
 
@@ -150,14 +143,7 @@ const THURSDAY_SUBJECT = [
     subjectColor.데이터통신,
     "IT 3128"
   ),
-  new TimeTableEvent(
-    "자바",
-    "13:00",
-    "15:00",
-    4,
-    subjectColor.자바,
-    "IT 7210"
-  ),
+  new TimeTableEvent("자바", "13:00", "15:00", 4, subjectColor.자바, "IT 7210"),
   new TimeTableEvent(
     "생산운영관리",
     "15:00",
@@ -194,7 +180,6 @@ const FRIDAY_SUBJECT = [
     "IT 10221"
   ),
 ];
-
 
 export const SUBJECT_INFO = [
   ...MONDAY_SUBJECT,
