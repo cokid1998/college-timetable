@@ -181,6 +181,8 @@ const FRIDAY_SUBJECT = [
   ),
 ];
 
+console.log(...MONDAY_SUBJECT)
+
 export const SUBJECT_INFO = [
   ...MONDAY_SUBJECT,
   ...TUESDAY_SUBJECT,
